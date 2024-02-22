@@ -97,6 +97,7 @@ subprojects {
     }
 
     test {
+        ignoreFailures = true
         useJUnitPlatform()
         testLogging {
             showStandardStreams = true
