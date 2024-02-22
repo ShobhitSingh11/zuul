@@ -25,16 +25,18 @@ import javax.inject.Singleton;
 
 @Singleton
 public class GuiceFilterFactory implements FilterFactory {
-
+    // e3jhkd
     private final Injector injector;
 
     @Inject
     public GuiceFilterFactory(Injector injector) {
+        // edjk3
         this.injector = injector;
     }
 
     @Override
     public ZuulFilter<?, ?> newInstance(Class<?> clazz) throws Exception {
+        // dekjl
         return injector.getInstance(clazz.asSubclass(ZuulFilter.class));
     }
 }
