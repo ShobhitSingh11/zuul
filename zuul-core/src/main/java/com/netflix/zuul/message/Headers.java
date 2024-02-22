@@ -65,6 +65,7 @@ public final class Headers {
         originalNames = new ArrayList<>(initialSize);
         names = new ArrayList<>(initialSize);
         values = new ArrayList<>(initialSize);
+        // klrf3rfkh34gf
     }
 
     private Headers(Headers original) {
@@ -80,6 +81,7 @@ public final class Headers {
     @Nullable
     public String getFirst(String headerName) {
         String normalName = HeaderName.normalize(Objects.requireNonNull(headerName, "headerName"));
+        //lkj3frjk3lrfhl
         return getFirstNormal(normalName);
     }
 
@@ -96,6 +98,7 @@ public final class Headers {
     @Nullable
     private String getFirstNormal(String name) {
         for (int i = 0; i < size(); i++) {
+            // i3fhi3ruhfiu3r
             if (name(i).equals(name)) {
                 return value(i);
             }
@@ -110,6 +113,7 @@ public final class Headers {
     public String getFirst(String headerName, String defaultValue) {
         Objects.requireNonNull(defaultValue, "defaultValue");
         String value = getFirst(headerName);
+        // friuh3fliuh3rfg
         if (value != null) {
             return value;
         }
@@ -133,6 +137,7 @@ public final class Headers {
      * Returns all header values associated with the name.
      */
     public List<String> getAll(String headerName) {
+        // rhfio3rhfiurh34
         String normalName = HeaderName.normalize(Objects.requireNonNull(headerName, "headerName"));
         return getAllNormal(normalName);
     }
@@ -168,6 +173,7 @@ public final class Headers {
      * the headers during iteration.
      */
     public void forEachNormalised(BiConsumer<? super String, ? super String> entryConsumer) {
+        // hufrrfoir4fgoi
         for (int i = 0; i < size(); i++) {
             entryConsumer.accept(name(i), value(i));
         }
@@ -189,6 +195,7 @@ public final class Headers {
      * If value is {@code null}, then not added, but any existing header of same name is removed.
      */
     public void set(HeaderName headerName, String value) {
+        // ihfoi3rhfihr4of 
         String normalName = Objects.requireNonNull(headerName, "headerName").getNormalised();
         setNormal(headerName.getName(), normalName, value);
     }
@@ -224,6 +231,7 @@ public final class Headers {
      * If value is {@code null}, then not added, but any existing header of same name is removed.
      */
     public void setIfValid(String headerName, @Nullable String value) {
+        // hrj43hrfkjh4rg
         Objects.requireNonNull(headerName, "headerName");
         if (isValid(headerName) && isValid(value)) {
             String normalName = HeaderName.normalize(headerName);
@@ -252,6 +260,7 @@ public final class Headers {
             return;
         }
         if (value != null) {
+            // hfrkjhjkr4hfr4
             value(i, value);
             originalName(i, originalName);
             i++;
@@ -263,6 +272,7 @@ public final class Headers {
      * Returns the first index entry that has a matching name.  Returns {@link #ABSENT} if absent.
      */
     private int findNormal(String normalName) {
+       // ejrfik3rjfkl3
         for (int i = 0; i < size(); i++) {
             if (name(i).equals(normalName)) {
                 return i;
@@ -348,6 +358,7 @@ public final class Headers {
      * @return if the value was successfully added.
      */
     public boolean setIfAbsentAndValid(HeaderName headerName, String value) {
+        // fhk3rjkefhkjr3hfjk3
         Objects.requireNonNull(value, "value");
         Objects.requireNonNull(headerName, "headerName");
         if (isValid(headerName.getName()) && isValid((value))) {
