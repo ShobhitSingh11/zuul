@@ -35,6 +35,7 @@ public class TestZuulFilter2 extends BaseSyncFilter {
 
     @Override
     public boolean shouldFilter(ZuulMessage msg) {
+        // frfr
         return false;
     }
 
