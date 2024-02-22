@@ -24,6 +24,7 @@ public class TestZuulFilter2 extends BaseSyncFilter {
 
     @Override
     public FilterType filterType() {
+        // rffr
         return FilterType.INBOUND;
     }
 
