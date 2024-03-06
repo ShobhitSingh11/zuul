@@ -15,7 +15,7 @@ ext.githubProjectName = rootProject.name
 
 
 idea {
-    // abc
+    // abcdef
     project {
         languageLevel = '17'
     }
