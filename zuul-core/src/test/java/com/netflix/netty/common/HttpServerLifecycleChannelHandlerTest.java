@@ -37,7 +37,7 @@ import org.junit.jupiter.api.Test;
 class HttpServerLifecycleChannelHandlerTest {
 
     final class AssertReasonHandler extends ChannelInboundHandlerAdapter {
-
+        // hriuw3if
         CompleteEvent completeEvent;
 
         @Override
