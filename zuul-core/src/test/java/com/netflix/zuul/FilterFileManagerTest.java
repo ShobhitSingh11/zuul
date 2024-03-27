@@ -30,7 +30,7 @@ import static org.mockito.Mockito.doNothing;
 import static org.mockito.Mockito.spy;
 import static org.mockito.Mockito.times;
 import static org.mockito.Mockito.verify;
-
+// rt
 /**
  * Tests for {@link FilterFileManager}.
  */
@@ -38,7 +38,7 @@ import static org.mockito.Mockito.verify;
 class FilterFileManagerTest {
     @Mock
     private File nonGroovyFile;
-
+    
     @Mock
     private File groovyFile;
 
