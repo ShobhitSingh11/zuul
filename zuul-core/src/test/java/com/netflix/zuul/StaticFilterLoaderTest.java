@@ -29,7 +29,7 @@ import java.util.List;
 import java.util.SortedSet;
 
 class StaticFilterLoaderTest {
-
+// tgr
     private static final FilterFactory factory = new DefaultFilterFactory();
 
     @Test
