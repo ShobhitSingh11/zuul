@@ -34,28 +34,6 @@ allprojects {
 
 subprojects {
     
-    project.test {
-
-        include 'unit/**'
-
-        useJUnitPlatform()
-
-      }
-
- 
-
-      project.task("componentTest", type: Test) {
-
-        description = 'Run component tests'
-
-        mustRunAfter project.test
-
-        include 'component/**'
-
-        useJUnitPlatform()
-
-      }
-
     apply plugin: 'com.netflix.nebula.netflixoss'
     apply plugin: 'java'
     apply plugin: 'com.netflix.nebula.javadoc-jar'
