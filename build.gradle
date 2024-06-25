@@ -33,6 +33,21 @@ allprojects {
 }
 
 subprojects {
+    
+   tasks.named('test') {
+    description = 'Run unit tests'
+    include '**/zuul-processor/**/*.java'
+    useJUnitPlatform()
+  }
+
+   // Define the componentTest task explicitly
+task componentTest(type: Test) {
+    description = 'Run component tests'
+    mustRunAfter tasks.named('test')
+    include '**/zuul-core/**/*.java'
+    useJUnitPlatform()
+}
+
     apply plugin: 'com.netflix.nebula.netflixoss'
     apply plugin: 'java'
     apply plugin: 'com.netflix.nebula.javadoc-jar'
@@ -95,6 +110,26 @@ subprojects {
         jvmArgs += [
                 "-Xcheck:jni"
         ]
+    }
+
+    // This adds HARNESS_JAVA_AGENT to the testing command if it's
+    // provided through the command lines.
+    // Local builds will still remain same as it only adds if the
+    // parameter is provided.
+    tasks.withType(Test) {
+      if(System.getProperty("HARNESS_JAVA_AGENT")) {
+        jvmArgs += [System.getProperty("HARNESS_JAVA_AGENT")]
+      }
+    }
+
+    // This makes sure that any test tasks for subprojects don't
+    // fail in case the test filter does not match.
+    gradle.projectsEvaluated {
+            tasks.withType(Test) {
+                filter {
+                    setFailOnNoMatchingTests(false)
+                }
+            }
     }
 
     test {
