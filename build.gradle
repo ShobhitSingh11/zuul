@@ -97,6 +97,28 @@ subprojects {
         ]
     }
 
+    project.test {
+
+        include 'unit/**'
+
+        useJUnitPlatform()
+
+      }
+
+ 
+
+      project.task("componentTest", type: Test) {
+
+        description = 'Run component tests'
+
+        mustRunAfter: project.test
+
+        include 'component/**'
+
+        useJUnitPlatform()
+
+      }
+
     test {
         useJUnitPlatform()
         testLogging {
