@@ -117,27 +117,27 @@ subprojects {
             }
     }
 
-    // project.test {
+    project.test {
 
-    //     include 'unit/**'
+        include 'unit/**'
 
-    //     useJUnitPlatform()
+        useJUnitPlatform()
 
-    //   }
+      }
 
  
 
-    //   project.task("componentTest", type: Test) {
+      project.task("componentTest", type: Test) {
 
-    //     description = 'Run component tests'
+        description = 'Run component tests'
 
-    //     mustRunAfter project.test
+        mustRunAfter project.test
 
-    //     include 'component/**'
+        include 'component/**'
 
-    //     useJUnitPlatform()
+        useJUnitPlatform()
 
-    //   }
+      }
 
     test {
         useJUnitPlatform()
