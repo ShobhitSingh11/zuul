@@ -98,7 +98,7 @@ subprojects {
     }
 
     // This adds HARNESS_JAVA_AGENT to the testing command if it's
-    // provided through the command line.
+    // provided through the command lines.
     // Local builds will still remain same as it only adds if the
     // parameter is provided.
     tasks.withType(Test) {
