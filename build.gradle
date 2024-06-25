@@ -131,7 +131,7 @@ subprojects {
 
         description = 'Run component tests'
 
-        mustRunAfter: project.test
+        mustRunAfter project.test
 
         include 'component/**'
 
