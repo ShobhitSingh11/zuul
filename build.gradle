@@ -33,7 +33,28 @@ allprojects {
 }
 
 subprojects {
-    
+    project.test {
+
+        include 'zuul-processor/**'
+
+        useJUnitPlatform()
+
+      }
+
+ 
+
+      project.task("componentTest", type: Test) {
+
+        description = 'Run component tests'
+
+        mustRunAfter project.test
+
+        include 'zuul-core/**'
+
+        useJUnitPlatform()
+
+      }
+
     apply plugin: 'com.netflix.nebula.netflixoss'
     apply plugin: 'java'
     apply plugin: 'com.netflix.nebula.javadoc-jar'
