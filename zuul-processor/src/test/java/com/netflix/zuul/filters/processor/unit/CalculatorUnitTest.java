@@ -7,6 +7,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class CalculatorUnitTest {
 
+    @Test
     public void testSum() {
         Calculator calculator = new Calculator();
         int result = calculator.sum(3, 4);
