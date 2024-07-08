@@ -13,5 +13,6 @@ public class CalculatorComponentTest {
         Calculator calculator = new Calculator();
         int result = calculator.sum(10, 20);
         assertEquals(30, result, "Sum of 10 and 20 should be 30");
+        
     }
 }
