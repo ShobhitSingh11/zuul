@@ -12,6 +12,6 @@ public class CalculatorComponentTest {
     public void testComponentSum() {
         Calculator calculator = new Calculator();
         int result = calculator.sum(10, 22);
-        assertEquals(32, result, "Sum of 10 and 20 should be 30");
+        assertEquals(32, result, "Sum of 10 and 22 should be 32");
     }
 }
