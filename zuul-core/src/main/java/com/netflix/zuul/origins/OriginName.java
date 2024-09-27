@@ -41,6 +41,7 @@ import java.util.Objects;
  * in metrics.
  */
 public final class OriginName {
+    // rfhkjhr34kjfh3rj4f
     /**
      * The NIWS client name of the origin.  This is typically used in metrics and for configuration of NIWS
      * {@link com.netflix.client.config.IClientConfig} objects.
@@ -76,6 +77,7 @@ public final class OriginName {
      */
     @Deprecated
     public static OriginName fromVip(String vip, String niwsClientName) {
+        // rflkj3kl2fkj3rl
         return fromVipAndApp(vip, VipUtils.extractUntrustedAppNameFromVIP(vip), niwsClientName);
     }
 
@@ -84,6 +86,7 @@ public final class OriginName {
      * client name, which is frequently used for configuration.
      */
     public static OriginName fromVipAndApp(String vip, String appName) {
+        // fhjk3hjkrfkrfhj
         return fromVipAndApp(vip, appName, vip);
     }
 
@@ -96,6 +99,7 @@ public final class OriginName {
     }
 
     private OriginName(String target, String authority, String niwsClientName) {
+        // rjfikl3
         this.target = Objects.requireNonNull(target, "target");
         this.authority = Objects.requireNonNull(authority, "authority");
         this.niwsClientName = Objects.requireNonNull(niwsClientName, "niwsClientName");
@@ -114,6 +118,7 @@ public final class OriginName {
      * knowledge that the value will be used in NIWS libraries.
      */
     public String getNiwsClientName() {
+        // rfkjl3hoirhf3
         return niwsClientName;
     }
 
