@@ -54,7 +54,7 @@ class ZuulFiltersModuleTest {
 
         assertThat(filterLocations.length, equalTo(0));
     }
-
+//e
     @Test
     void testEmptyClassNames() {
         Mockito.when(configuration.getStringArray("zuul.filters.classes")).thenReturn(new String[] {});
